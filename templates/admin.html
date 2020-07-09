@@ -1,0 +1,42 @@
+{% extends 'commonadmin.html' %}
+
+{% block aravind %}
+
+
+    <form action="{% url 'admin_login_check' %}" method="post">
+    {% csrf_token %}
+    <table align="center" border="2">
+        <tr>
+            <th style="text-align: center;background-color: darkgoldenrod;">
+                Admin Login
+            </th>
+        </tr>
+    <tr>
+        <th>
+            <input type="text" placeholder=" username" name="t1">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="password" placeholder="password" name="t2">
+        </th>
+    </tr>
+    <tr>
+        <th style="text-align: center">
+            <button class="btn btn-outline-success" type="submit">login</button>
+        </th>
+    </tr>
+        {% if messages %}
+            <tr>
+                <th style="background-color: aliceblue;color: red;text-align: center">
+                    {% for x in messages %}
+                        {{ x }}
+                    {% endfor %}
+                </th>
+            </tr>
+
+        {% endif %}
+    </table>
+    </form>
+
+{% endblock %}

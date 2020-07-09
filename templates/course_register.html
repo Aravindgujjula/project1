@@ -1,0 +1,29 @@
+{% extends 'commonadmin.html' %}
+{% block aravind %}
+    <form action="{% url 'save_course' %}" method="post">
+    {% csrf_token %}
+    <table align="center" border="2">
+        <tr><th style="background-color: black;color: cornsilk;text-align: center;font-size: 30px;">Schedule a New Course</th></tr>
+        <tr>
+            <th>
+                {{ form.as_p }}
+            </th>
+        </tr>
+        <tr>
+            <th style="text-align: center">
+                <button type="submit" class="btn btn-dark">Register</button>
+            </th>
+        </tr>
+                {% if messages %}
+            <tr>
+                <th style="background-color: aliceblue;color: red;text-align: center">
+                    {% for x in messages %}
+                        {{ x }}
+                    {% endfor %}
+                </th>
+            </tr>
+
+        {% endif %}
+    </table>
+    </form>
+{% endblock %}

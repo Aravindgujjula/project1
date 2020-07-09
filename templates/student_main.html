@@ -1,0 +1,39 @@
+{% extends 'student_common.html' %}
+{% block aravind %}
+    <style>
+        .menu1
+        {
+            background-color: black;
+            color: wheat;
+            text-align: center;
+            font-size: 20px;
+            width: 200px;
+        }
+    </style>
+    {% load static %}
+    <table align="center" border="2">
+        <tr>
+            <th class="menu1">Register</th>
+            <th class="menu1">login</th>
+            <th class="menu1">search</th>
+            <th class="menu1">Contact us</th>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <img src="{% static 'images/students.jpg' %}" width="600" height="400">
+            </th>
+            <th colspan="2">
+                <h3>Available courses</h3>
+                <table>
+                    <tr>
+                        <th>gdg</th>
+                    </tr>
+                     <tr>
+                        <th>gdg</th>
+                    </tr>
+                </table>
+
+            </th>
+        </tr>
+    </table>
+{% endblock %}
